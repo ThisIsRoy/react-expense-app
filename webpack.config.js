@@ -9,7 +9,7 @@ module.exports = (env) => {
     entry: './src/app.js',
     output: {
       //entry path can be relative, but output path must be absolute
-      path: path.join(__dirname, 'public'),
+      path: path.join(__dirname, 'public', 'dist'),
       filename: 'bundle.js'
     },
 
@@ -33,7 +33,8 @@ module.exports = (env) => {
     devtool: isProduction ? 'source-map' : 'inline-source-map',
     devServer: {
       contentBase: path.join(__dirname, 'public'),
-      historyApiFallback: true
+      historyApiFallback: true,
+      publicPath: '/dist/'
     }
   }
 };
