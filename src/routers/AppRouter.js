@@ -4,10 +4,10 @@ import { Router, Link, NavLink, Route, Switch } from 'react-router-dom';
 import LoginPage from '../components/LoginPage';
 import ExpenseDashboardPage from '../components/ExpenseDashboardPage';
 import AddExpensePage from '../components/AddExpensePage';
-import HelpPage from '../components/HelpPage';
 import EditExpensePage from '../components/EditExpensePage';
 import NotFoundPage from '../components/NotFoundPage';
-import Header from '../components/Header';
+import PrivateRoute from './PrivateRoute';
+import PublicRoute from './PublicRoute';
 
 //BrowserRouter can only take one child element, must use one div 
 
@@ -16,13 +16,11 @@ export const history = createHistory();
 const AppRouter = () => (
   <Router history={history}>
     <div>
-      <Header />
       <Switch>
-        <Route path="/" component={LoginPage} exact={true} />
-        <Route path="/dashboard" component={ExpenseDashboardPage} exact={true} />
-        <Route path="/create" component={AddExpensePage} exact={true} />
-        <Route path="/edit/:id" component={EditExpensePage} exact={true} />
-        <Route path="/help" component={HelpPage} exact={true} />
+        <PublicRoute path="/" component={LoginPage} exact={true} />
+        <PrivateRoute path="/dashboard" component={ExpenseDashboardPage} exact={true} />
+        <PrivateRoute path="/create" component={AddExpensePage} exact={true} />
+        <PrivateRoute path="/edit/:id" component={EditExpensePage} exact={true} />
         <Route component={NotFoundPage} />
       </Switch>
     </div>
