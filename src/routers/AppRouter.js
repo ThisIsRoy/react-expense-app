@@ -1,5 +1,6 @@
 import React from 'react';
-import { BrowserRouter, Link, NavLink, Route, Switch } from 'react-router-dom';
+import createHistory from 'history/createBrowserHistory';
+import { Router, Link, NavLink, Route, Switch } from 'react-router-dom';
 import LoginPage from '../components/LoginPage';
 import ExpenseDashboardPage from '../components/ExpenseDashboardPage';
 import AddExpensePage from '../components/AddExpensePage';
@@ -10,8 +11,10 @@ import Header from '../components/Header';
 
 //BrowserRouter can only take one child element, must use one div 
 
+export const history = createHistory();
+
 const AppRouter = () => (
-  <BrowserRouter>
+  <Router history={history}>
     <div>
       <Header />
       <Switch>
@@ -23,7 +26,7 @@ const AppRouter = () => (
         <Route component={NotFoundPage} />
       </Switch>
     </div>
-  </BrowserRouter>
+  </Router>
 );
 
 export default AppRouter;
