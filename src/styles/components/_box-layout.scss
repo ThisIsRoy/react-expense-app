@@ -1,0 +1,22 @@
+.box-layout {
+  align-items: center;
+  background: url('/images/bg.jpg');
+  background-size: cover;
+  display: flex;
+  height: 100vh;
+  justify-content: center;
+  width: 100vw;
+}
+
+.box-layout__box {
+  // background: fade-out(green, 0.15);
+  color: white;
+  text-align: center;
+}
+
+.login-text {
+  color: #79C753;
+  font-size: $l-size;
+  font-weight: 400;
+  margin-bottom: $xl-size;
+}
