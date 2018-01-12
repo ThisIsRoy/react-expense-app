@@ -1,3 +1,7 @@
+* {
+  box-sizing: border-box;
+}
+
 html {
   // make rem base 10px instead of base 16px
   font-size: 62.5%; 
