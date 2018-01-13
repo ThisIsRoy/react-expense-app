@@ -1,0 +1,14 @@
+.show-mobile {
+  font-weight: 700;
+  @media (min-width: $desktop-breakpoint) {
+    display: none;
+  }
+}
+
+.show-desktop {
+  font-size: $m-size;
+  font-weight: 700;
+  @media (max-width: $desktop-breakpoint - 0.01 rem) {
+    display: none;
+  }
+}
