@@ -2,6 +2,7 @@ import React from 'react';
 import { connect } from 'react-redux';
 import ExpenseListItem from './ExpenseListItem';
 import selectExpenses from '../selectors/expenses';
+import { createHashHistory } from 'history';
 
 export const ExpenseList = (props) => (
   <div className="content-container">
@@ -17,7 +18,7 @@ export const ExpenseList = (props) => (
         </div>
       ) : (
           props.expenses.map((eachExpense) => (
-            <ExpenseListItem key={eachExpense.id} {...eachExpense} />
+            <ExpenseListItem key={eachExpense.id} history={createHashHistory()} {...eachExpense} />
           ))
         )}
     </div>

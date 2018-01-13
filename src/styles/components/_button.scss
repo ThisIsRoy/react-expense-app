@@ -8,6 +8,9 @@
   line-height: 1;
   padding: $s-size;
   text-decoration: none;
+  &:hover {
+    background: lighten($blue, 8%);
+  }
 }
 
 .button--link {
@@ -15,7 +18,20 @@
 }
 
 .button--secondary {
-  background: #888888;
+  background: $off-grey;
+  &:hover {
+    background: lighten($off-grey, 8%);
+  }
+}
+
+.button--small {
+  @extend .button;
+  background: $red;
+  font-size: $xs-size;
+  padding: $xxs-size $xs-size;
+  &:hover {
+    background: lighten($red, 8%);
+  }
 }
 
 .login-button {
