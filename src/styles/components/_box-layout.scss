@@ -15,8 +15,19 @@
 }
 
 .login-text {
-  color: #79C753;
+  animation: fadein 3s ease-in-out;
+  //color: #79C753;
+  color: white;
   font-size: $l-size;
   font-weight: 400;
   margin-bottom: $xl-size;
+}
+
+@keyframes fadein {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
 }

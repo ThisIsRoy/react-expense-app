@@ -15,6 +15,10 @@
 
 .button--link {
   background: none;
+  &:hover {
+    background: none;
+    color: darken(white, 15%);
+  }
 }
 
 .button--secondary {
