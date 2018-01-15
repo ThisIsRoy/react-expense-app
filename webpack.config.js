@@ -15,7 +15,7 @@ module.exports = (env) => {
   const CSSExtract = new ExtractTextPlugin('styles.css');
 
   return {
-    entry: './src/app.js',
+    entry: ['babel-polyfill', './src/app.js'],
     output: {
       //entry path can be relative, but output path must be absolute
       path: path.join(__dirname, 'public', 'dist'),
