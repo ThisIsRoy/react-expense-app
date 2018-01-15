@@ -27,7 +27,6 @@ beforeEach((done) => {
 
 test('should setup remove expense action object', () => {
   const action = removeExpense({ id: '123' });
-  // must use toEqual instead of toBe for arrays and objects
   expect(action).toEqual({
     type: 'REMOVE_EXPENSE',
     id: '123'

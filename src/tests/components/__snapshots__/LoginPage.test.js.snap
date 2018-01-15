@@ -1,12 +1,24 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`should render LoginPage correct 1`] = `
-<div>
-  <p>
-    This is the login page!
-  </p>
-  <button>
-    Log In
-  </button>
+<div
+  className="box-layout"
+>
+  <div
+    className="box-layout__box"
+  >
+    <h1
+      className="login-text"
+    >
+      A simple and elegant way of 
+      <br />
+      tracking your expenditures
+    </h1>
+    <button
+      className="login-button"
+    >
+      Log In
+    </button>
+  </div>
 </div>
 `;
