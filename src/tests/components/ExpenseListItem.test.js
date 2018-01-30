@@ -14,13 +14,12 @@ test('should render ExpenseListItem with fixture data', () => {
 
 test('should call the delete button correctly', () => {
   const onClick = jest.fn();
-  const startRemoveButton = jest.fn();
-  const preventDefault = jest.fn();
-  const wrapper = shallow(<ExpenseListItem onClick={onClick} startRemoveButton={startRemoveButton} />);
+  const startRemoveExpense = jest.fn();
+  const wrapper = shallow(<ExpenseListItem onClick={onClick} startRemoveExpense={startRemoveExpense} history={[]}/>);
   wrapper.find('button').simulate('click', {
     preventDefault: () => {
 
     }
   });
-  expect(onClick).toHaveBeenLastCalledWith();
+  expect(startRemoveExpense).toHaveBeenLastCalledWith({id: undefined});
 });
